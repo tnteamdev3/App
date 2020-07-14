@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+
+<style type="text/css">
+div.box{
+	text-align: center;
+}
+
+</style>
+<div class="sidebar">
+	<!-- Vertical navbar -->
+	<div class="vertical-nav active " id="sidebar">
+  		<div class="py-4 px-3 mb-4 ">
+      		<div class="media-body">
+        		<h4 class="font-weight-black text-muted mb-0">Dashboard</h4>
+      		</div>
+  		</div>
+
+  		
+    			
+	</div>
+	</div>
+<!-- End vertical navbar -->
+
+<div class="box">
+<!-- content -->
+      <div class="row content-algin-center">
+            
+         	<div class="quick-stats-invoices col-xs-12 col-md-6 col-sm-6 col-lg-1">
+            <div class="top_stats_wrapper font-weight-bold text-primary">
+			<p class="text-lg text-gray-600">It's currently {{'now'|date('h:i A' )}}. </p>
+               </div>
+         </div>
+
+            <div class="quick-stats-invoices col-xs-12 col-md-6 col-sm-6 col-lg-1">
+            <div class="top_stats_wrapper font-weight-bold text-primary">
+             <p class="text-lg text-gray-600"><i class="hidden-sm fa fa-cubes"></i> Current Cash
+               </p>
+         
+               </div>
+         </div>
+            <div class="quick-stats-invoices col-xs-12 col-md-6 col-sm-6 col-lg-1">
+            <div class="top_stats_wrapper font-weight-bold text-primary">
+             <p class="text-lg text-gray-600"><i class="hidden-sm fa fa-cubes"></i>Current Coins
+               </p>
+            </div>
+         </div>
+
+         <div class="quick-stats-invoices col-xs-12 col-md-6 col-sm-6 col-lg-1">
+            <div class="top_stats_wrapper font-weight-bold text-primary">
+             <p class="text-uppercase"><i class="fa fa-users" aria-hidden="true"></i>{{ app.user.username }}
+            </p>
+               </div>
+         </div> 
+         </div>
+
+<!-- End content -->
+
+
+</div>
+
+<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">deconnexion</p>
+      				<a href="{{path('app_logout') }}"  class="nav-link font-italic">
+                	<i class="fa fa-sign-out mr-3 text-primary fa-fw" aria-hidden="true"></i>
+                		Logout
+            		</a>
+
+{% endblock %}
