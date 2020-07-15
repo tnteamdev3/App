@@ -13,9 +13,8 @@ class FondType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('cash')
-            ->add('coins')
-            ->add('amount')
+            ->add('amountcash')
+            ->add('amountcoins')
             ->add('date')
         ;
     }

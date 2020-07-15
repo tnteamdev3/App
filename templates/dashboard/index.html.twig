@@ -122,9 +122,8 @@ background-color: white;
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Cash</th>
-                <th>Coins</th>
-                <th>Amount</th>
+                <th>Amount in Cash</th>
+                <th>Amount in Coins</th>
                 <th>Date</th>
             </tr>
         </thead>
@@ -133,9 +132,8 @@ background-color: white;
             <tr>
                 <td>{{ fond.id }}</td>
                 <td>{{ fond.name }}</td>
-                <td>{{ fond.cash }}</td>
-                <td>{{ fond.coins }}</td>
-                <td>{{ fond.amount }}</td>
+                <td>{{ fond.amountcash }}</td>
+                <td>{{ fond.amountcoins }}</td>
                 <td>{{ fond.date ? fond.date|date('Y-m-d H:i:s') : '' }}</td>
                
             </tr>
