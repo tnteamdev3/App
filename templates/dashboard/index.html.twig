@@ -5,7 +5,7 @@
 {% block body %}
 
 <style type="text/css">
-    	div.box {
+    	div.bb {
   width: 1000px;
   height: 550px;
   padding: 20px;
@@ -79,7 +79,7 @@ background-color: white;
 	</div>
 <!-- End vertical navbar -->
 <center>
-  <div class="box">
+  <div class="bb">
 <div class="card-deck">
   <div class="row-sm-8">
     <div class="card border-primary mb-3">
@@ -115,8 +115,39 @@ background-color: white;
     </div>
   </div>
 </div>
-
+<br>
+<br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cash</th>
+                <th>Coins</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fond in fonds %}
+            <tr>
+                <td>{{ fond.id }}</td>
+                <td>{{ fond.name }}</td>
+                <td>{{ fond.cash }}</td>
+                <td>{{ fond.coins }}</td>
+                <td>{{ fond.amount }}</td>
+                <td>{{ fond.date ? fond.date|date('Y-m-d H:i:s') : '' }}</td>
+               
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </div>
 </center>
 
 {% endblock %}
+           

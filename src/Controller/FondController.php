@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Fond;
-use App\Form\Fond1Type;
+use App\Form\FondType;
 use App\Repository\FondRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
