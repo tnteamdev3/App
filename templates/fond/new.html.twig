@@ -4,17 +4,78 @@
 
 {% block body %}
 <style type="text/css">
-div.box {
-  padding: 20px;
-  margin: 20px;
+        body {
+background-color: white;
+
 }
 
-</style>
+.separator {
+  margin: 3rem 0;
+  border-bottom: 1px dashed #fff;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1px;
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+
+}
+    </style>
+<div class="sidebar">
+    <!-- Vertical navbar -->
+    <div class="vertical-nav active " id="sidebar">
+        <div class="py-4 px-3 mb-4 ">
+            <div class="media-body">
+                <h4 class="font-weight-black text-muted mb-0">Fond Index</h4>
+            </div>
+        </div>
+        <div><p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Fonds</p>
+                    
+                    <a href="{{path('fond_new') }}"  class="nav-link font-italic">
+                    <i class="fa fa-plus-square-o mr-3 text-primary fa-fw" aria-hidden="true"></i>
+                        Create Fond
+                    </a>
+                    
+        </div>
+         <div><p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Dashboard</p>
+                    
+                    <a href="{{path('app_dashboard') }}"  class="nav-link font-italic">
+                    <i class="fa fa-plus-square-o mr-3 text-primary fa-fw" aria-hidden="true"></i>
+                        Dashboard
+                    </a>
+                    
+        </div>
+        <div><p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">deconnexion</p>
+                    <a href="{{path('app_logout') }}"  class="nav-link font-italic">
+                    <i class="fa fa-sign-out mr-3 text-primary fa-fw" aria-hidden="true"></i>
+                        Logout
+                    </a>
+        </div>
+        
+                
+    </div>
+    </div>
+<!-- End vertical navbar -->
 <div class="card text-black" style="max-width: 22rem;  background-color: rgb(254,254,226);  margin-left: 520px;
 "><div class="box">
     <h1>Add new Fond</h1>
 
-    {{ include('fond/_form.html.twig') }}
+    {{ include('fond/_form.html.twig') }}<br>
 
     <a href="{{ path('fond_index') }}">back to list</a>
 </div>

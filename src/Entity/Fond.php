@@ -30,17 +30,18 @@ class Fond
     /**
      * @ORM\Column(type="integer")
      */
-    private $coins;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
     private $amount;
 
     /**
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $coins;
+
 
     public function getId(): ?int
     {
@@ -71,18 +72,6 @@ class Fond
         return $this;
     }
 
-    public function getCoins(): ?int
-    {
-        return $this->coins;
-    }
-
-    public function setCoins(int $coins): self
-    {
-        $this->coins = $coins;
-
-        return $this;
-    }
-
     public function getAmount(): ?int
     {
         return $this->amount;
@@ -103,6 +92,18 @@ class Fond
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getCoins(): ?string
+    {
+        return $this->coins;
+    }
+
+    public function setCoins(string $coins): self
+    {
+        $this->coins = $coins;
 
         return $this;
     }

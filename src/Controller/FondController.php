@@ -31,7 +31,7 @@ class FondController extends AbstractController
     public function new(Request $request): Response
     {
         $fond = new Fond();
-        $form = $this->createForm(Fond1Type::class, $fond);
+        $form = $this->createForm(FondType::class, $fond);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +63,7 @@ class FondController extends AbstractController
      */
     public function edit(Request $request, Fond $fond): Response
     {
-        $form = $this->createForm(Fond1Type::class, $fond);
+        $form = $this->createForm(FondType::class, $fond);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
