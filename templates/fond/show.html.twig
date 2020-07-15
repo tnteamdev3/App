@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fond{% endblock %}
+
+{% block body %}
+    <h1>Fond</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fond.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ fond.name }}</td>
+            </tr>
+            <tr>
+                <th>Cash</th>
+                <td>{{ fond.cash }}</td>
+            </tr>
+            <tr>
+                <th>Coins</th>
+                <td>{{ fond.coins }}</td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>{{ fond.amount }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ fond.date ? fond.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('fond_index') }}">back to list</a>
+
+    <a href="{{ path('fond_edit', {'id': fond.id}) }}">edit</a>
+
+    {{ include('fond/_delete_form.html.twig') }}
+{% endblock %}

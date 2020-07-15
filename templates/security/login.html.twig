@@ -3,16 +3,27 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
+<style type="text/css">
+    div.tt{
+        margin: 20px;
+        padding: 20px;
+    }
+</style>
+<center>
+<div class="card text-black" style="max-width: 18rem;">
+<div class="tt">
 
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
+<br>
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1><br>
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus><br>
+
     <label for="inputPassword">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" required>
 
@@ -30,13 +41,14 @@
             </label>
         </div>
     #}
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
+<br>
+<button class="btn btn-lg btn-primary" type="submit">
+    Sign in
+</button>
    </form>
  <br>
-<a href="{{path('app_register') }}"  class="btn btn-lg  btn-primary">
-                        Register
-                    </a>
+ <a href="{{ path('app_register') }}" class="btn btn-lg btn-primary"> Register</a>
+</div>
+</div>
+</center>
 {% endblock %}

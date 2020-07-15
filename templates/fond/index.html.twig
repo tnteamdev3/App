@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fond index{% endblock %}
+
+{% block body %}
+<div class="card text-black" style="max-width: 27rem;  margin-left: 20px;">
+    <h1>Fond index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cash</th>
+                <th>Coins</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fond in fonds %}
+            <tr>
+                <td>{{ fond.id }}</td>
+                <td>{{ fond.name }}</td>
+                <td>{{ fond.cash }}</td>
+                <td>{{ fond.coins }}</td>
+                <td>{{ fond.amount }}</td>
+                <td>{{ fond.date ? fond.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('fond_show', {'id': fond.id}) }}">show</a>
+                    <a href="{{ path('fond_edit', {'id': fond.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('fond_new') }}">Create new</a>
+{% endblock %}

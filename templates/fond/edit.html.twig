@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Fond{% endblock %}
+
+{% block body %}
+    <h1>Edit Fond</h1>
+
+    {{ include('fond/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('fond_index') }}">back to list</a>
+
+    {{ include('fond/_delete_form.html.twig') }}
+{% endblock %}

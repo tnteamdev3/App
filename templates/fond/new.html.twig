@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Fond{% endblock %}
+
+{% block body %}
+<style type="text/css">
+div.box {
+  padding: 20px;
+  margin: 20px;
+}
+
+</style>
+<div class="card text-black" style="max-width: 22rem;  background-color: rgb(254,254,226);  margin-left: 520px;
+"><div class="box">
+    <h1>Add new Fond</h1>
+
+    {{ include('fond/_form.html.twig') }}
+
+    <a href="{{ path('fond_index') }}">back to list</a>
+</div>
+   </div>
+{% endblock %}
