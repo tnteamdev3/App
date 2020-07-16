@@ -5,7 +5,7 @@
 {% block body %}
 
 <style type="text/css">
-    	div.bb {
+  div.bb {
   width: 1000px;
   height: 550px;
   padding: 20px;
@@ -14,40 +14,32 @@
   margin-right: 50px;
   background-color: white;
   margin-top: 50px;
-
-}
-    	body {
-background-color: white;
-
-}
-
-.separator {
-  margin: 3rem 0;
-  border-bottom: 1px dashed #fff;
-}
-
-.text-uppercase {
-  letter-spacing: 0.1px;
-}
-
-.text-gray {
-  color: #aaa;
-}
-
-.vertical-nav {
-  min-width: 17rem;
-  width: 17rem;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  position: absolute;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s;
-}
-
-
-}
-    </style>
+          }
+  body {
+  background-color: white;
+        }
+  .separator {
+    margin: 3rem 0;
+    border-bottom: 1px dashed #fff;
+              }
+  .text-uppercase {
+    letter-spacing: 0.1px;
+                  }
+  .text-gray {
+    color: #aaa;
+             }
+  .vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+                }
+        }
+</style>
 <div class="sidebar">
 	<!-- Vertical navbar -->
 	<div class="vertical-nav active " id="sidebar">
@@ -65,58 +57,55 @@ background-color: white;
                 	<i class="fa fa-plus-square-o mr-3 text-primary fa-fw" aria-hidden="true"></i>
                 		Create Fond
             		</a>
-            		
-        </div>
+      </div>
   		<div><p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">deconnexion</p>
       				<a href="{{path('app_logout') }}"  class="nav-link font-italic">
                 	<i class="fa fa-sign-out mr-3 text-primary fa-fw" aria-hidden="true"></i>
                 		Logout
             		</a>
-        </div>
-  		
-    			
+      </div>	
 	</div>
 	</div>
 <!-- End vertical navbar -->
 <center>
   <div class="bb">
-<div class="card-deck">
-  <div class="row-sm-8">
-    <div class="card border-primary mb-3">
-      <div class="card-body">
-        <h5 class="card-title">Current Time</h5>
-			<p class="card-text"> It's currently {{'now'|date('h:i A' )}}. </p>
-      </div>
-    </div>
-  </div>
-  <div class="row-sm-8">
-    <div class="card border-primary mb-3">
-      <div class="card-body">
-        <h5 class="card-title">Current Cash</h5>
-			<p class="card-text"> The cash </p>
-      </div>
-    </div>
-  </div>
+  <div class="card-deck">
     <div class="row-sm-8">
-    <div class="card border-primary mb-3">
-      <div class="card-body">
-        <h5 class="card-title">Current Coins</h5>
-			<p class="card-text"> The coin </p>
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Current Time</h5>
+  			<p class="card-text"> It's currently {{'now'|date('h:i A' )}}. </p>
+        </div>
+      </div>
+    </div>
+    <div class="row-sm-8">
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Current Cash</h5>
+  			<p class="card-text"> The cash </p>
+        </div>
+      </div>
+    </div>
+      <div class="row-sm-8">
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Current Coins</h5>
+  			<p class="card-text"> The coin </p>
+        </div>
+      </div>
+    </div>
+   <div class="row-sm-8">
+      <div class="card border-primary mb-3">
+        <div class="card-body">
+        <h5 class="card-title">You are loging as</h5>
+  			<p class="card-text">  {{ app.user.username }} </p>
+  			<p class="card-text">  </p>
+        </div>
       </div>
     </div>
   </div>
- <div class="row-sm-8">
-    <div class="card border-primary mb-3">
-      <div class="card-body">
-      <h5 class="card-title">You are loging as</h5>
-			<p class="card-text">  {{ app.user.username }} </p>
-			<p class="card-text">  </p>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
+  <br>
+  <br>
     <table class="table">
         <thead>
             <tr>
